@@ -34,7 +34,7 @@ if(isset($_POST["kadi"])) {
         echo "Kullanıcı Adı/Şifre Boş Olamaz";
     }
     else {
-        $sorgu = $db->query("select * from userlogin where kadi = '$kadi' && ksifre='$ksifre'",PDO::FETCH_ASSOC);
+        $sorgu = $baglanti->query("select * from uyeler where kullaniciAdi = '$kadi' && sifre='$ksifre'",PDO::FETCH_ASSOC);
 
         if($sorgu->rowCount()){
             $_SESSION["login"]=true;
