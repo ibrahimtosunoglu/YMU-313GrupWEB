@@ -38,6 +38,7 @@ session_start();?>
     }
     else{
         echo "<a href=\"userlogin.php\">Giriş Yap</a>";
+        echo "<a href=\"uyekayit.php\">Kayıt Ol</a>";
     }?>
 </div>
 <!-- Sidebar -->
