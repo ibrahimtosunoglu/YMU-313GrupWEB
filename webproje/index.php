@@ -38,6 +38,7 @@ session_start();?>
     }
     else{
         echo "<a href=\"userlogin.php\">Giriş Yap</a>";
+        echo "<a href=\"uyekayit.php\">Kayıt Ol</a>";
     }?>
 </div>
 <!-- Sidebar -->
@@ -56,7 +57,7 @@ session_start();?>
     <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
     <div class="w3-container">
         <img src="logo.fw.png" alt="Car" style="width:5%"> <font face="arial" size="20" color="white">
-                <b>alternatifim.con</b></font>
+                <b>alternatifim.com</b></font>
     </div>
 </div>
 
