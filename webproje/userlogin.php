@@ -44,11 +44,8 @@ if(isset($_GET["baslik"])){
 
 if(isset($_POST["kadi"])) {
 
-
-
     $kadi = $_POST["kadi"];
     $ksifre = $_POST["ksifre"];
-
 
     if(!$kadi || !$ksifre){
         echo "Kullanıcı Adı/Şifre Boş Olamaz";
@@ -58,7 +55,7 @@ if(isset($_POST["kadi"])) {
 
         if($sorgu->rowCount()){
             $_SESSION["login"]=true;
-            header("Location:userlogin.php");
+            header("Location:index.php");
         }
         elseif(!$sorgu->rowCount()){
             echo "Kullanıcı Adı/Şifre Yanlış";
