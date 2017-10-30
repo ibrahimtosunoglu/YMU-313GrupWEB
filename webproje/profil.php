@@ -1,8 +1,68 @@
-<?php include 'baglanti.php';?>
-<?php
-
+<?php include 'baglanti.php';
 session_start();
+
+if(isset($_SESSION["login"])&& $_SESSION["login"] ){
 ?>
+
+<html>
+<title>ANASAYFA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>.topnav {
+        background-color: #35af9b;
+        overflow: hidden;
+    }
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    .topnav a:hover {
+        background-color: #ddd;
+        color:#35af9b;
+    }
+    .topnav a.active {
+        background-color: #35af9b;
+        color: white;
+    }</style>
+<body>
+<div class="topnav" id="myTopnav">
+    <a href="index.php">Anasayfa</a>
+    <a onclick="w3_open()">Kategoriler</a>
+    <a href="iletisim.php">İletişim</a>
+    <a href="canli.php">Canlı Sohbet</a>
+    <?php if(isset($_SESSION["login"])&& $_SESSION["login"] ){
+        echo "<a href=\"profil.php\">Profilim</a>";
+        echo "<a href=\"uyecikis.php\">Çıkış Yap</a>";
+    }
+    else{
+        echo "<a href=\"userlogin.php\">Giriş Yap</a>";
+        echo "<a href=\"uyekayit.php\">Kayıt Ol</a>";
+    }?>
+</div>
+
+
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-large w3-light-grey" style="width:20%">
+    <a href="uyebilgiler.php" class="w3-bar-item w3-button w3-padding-16">Kişisel Bilgiler</a>
+    <a href="sifremailekran.php" class="w3-bar-item w3-button w3-padding-16">Şifre-Mail Değişikliği</a>
+
+</div>
+
+</body>
+</html>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,81 +107,8 @@ session_start();
     </style>
 </head>
 <body>
-
-
-<div class="kayit-form" >
-    <div class="row" style="height: 400px;">
-        <div class="col-sm-4 content">
-        </div>
-        <div class="col-sm-4 content">
-            <p><br><br><br>
-            <form action='sifredegis.php' method='post' accept-charset='UTF-8'>
-                <label>Şifre Değiştirme</label>
-                <div class="form-group">
-                    <input type="password" class="form-control" name="esifre" placeholder="Eski Şifre"/>
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" name="ysifre" placeholder="Yeni Şifre"/>
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" name="tsifre" placeholder="Yeni Şifre Tekrar"/>
-                </div>
-                <div class="form-group">
-                    <input type="submit" class="btn btn-info" value="Değiştir">
-                </div>
-            </form>
-            </p>
-        </div>
-        <div class="col-sm-4 content">
-        </div>
-    </div>
-
-    <div class="row" style="height: 400px;">
-        <div class="col-sm-4 content">
-        </div>
-        <div class="col-sm-4 content">
-            <p><br><br><br>
-            <form action='maildegis.php' method='post' accept-charset='UTF-8'>
-                <label>Mail Değiştirme</label>
-                <div class="form-group">
-                    <input type="text" class="form-control" name="email" placeholder="Eski Mail"/>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" name="ymail" placeholder="Yeni Mail"/>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" name="tmail" placeholder="Yeni Mail Tekrar"/>
-                </div>
-                <div class="form-group">
-                    <input type="submit" class="btn btn-info" value="Değiştir">
-                </div>
-            </form>
-            </p>
-        </div>
-        <div class="col-sm-4 content">
-        </div>
-    </div>
-</div>
-
-
-
 </body>
 </html>
 <?php
-
-    /*    if (!empty($_POST['kadi'])){
-            $kadi=$_POST['kadi'];
-
-            $sth = $baglanti->prepare("select * from menu where id=$id ");
-            $sth->execute();
-            if($row=$sth->fetch(PDO::FETCH_OBJ)) {
-
-                $kadi=$row->kadi;
-
-            }else{
-                echo "bulunamadı ... ";
-            }
-        }
-    */
+}
 ?>
-
