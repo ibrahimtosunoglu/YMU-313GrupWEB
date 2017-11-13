@@ -10,7 +10,7 @@ if($_POST)
     if ( $say = $query -> rowCount() ){
         if( $say > 0 ){
             session_start();
-            $_SESSION['oturum']=true;
+            $_SESSION['admin']=true;
             $_SESSION['name']=$nick;
             $_SESSION['pass']=$sifre;
 
