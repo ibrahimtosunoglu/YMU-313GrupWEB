@@ -20,7 +20,7 @@
 
             <div class="w3-white w3-text-grey w3-card-4">
                 <div class="w3-display-container">
-                        <img src="bilgisayarresim/1.jpg" style="width:50%">
+                        <img src="fotolar/bilgisayarresim/1.jpg" style="width:50%">
                     <br>
                     <br>
                      <div class="w3-display-bottomleft w3-container w3-text-black">
