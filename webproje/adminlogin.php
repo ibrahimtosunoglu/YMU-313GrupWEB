@@ -2,7 +2,7 @@
 <body background="bgimage.jpg">
 <?php session_start();
 if($_SESSION && $_SESSION['admin']==true){
-    echo"zaten oturum açık";
+    header("Location:adminpanel.php");
 echo "<div class=\"container\" style=\"background-color:#f1f1f1\">
         <button onclick=\"window.location.href='/webproje/adminlogoutislem.php'\" type=\"button\" class=\"cancelbtn\">Çıkış Yap</button>
     </div>";

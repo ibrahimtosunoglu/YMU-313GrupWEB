@@ -13,7 +13,7 @@ if($_POST)
             $_SESSION['admin']=true;
             $_SESSION['name']=$nick;
             $_SESSION['pass']=$sifre;
-
+            header("Location:adminpanel.php");
             echo "oturum başarıyla açıldı";
 
         }else{

@@ -32,6 +32,13 @@ session_start();?>
     <a onclick="w3_open()">Kategoriler</a>
     <a href="iletisim.php">İletişim</a>
     <a href="canli.php">Canlı Sohbet</a>
+    <?php
+    if(isset($_SESSION['admin']) && $_SESSION['admin']==true){
+        echo "<a href=\"adminlogoutislem.php\">Yönetici Çıkışı</a>";
+    }
+    else
+        echo "<a href=\"adminlogin.php\">Yönetici Girişi</a>";
+    ?>
     <?php if(isset($_SESSION["login"])&& $_SESSION["login"] ){
         echo "<a href=\"profil.php\">Profilim</a>";
         echo "<a href=\"uyecikis.php\">Çıkış Yap</a>";

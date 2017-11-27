@@ -1,6 +1,6 @@
 <?php include "baslik.php";
 include "baglanti.php";
-if(isset($_SESSION["admin"])&& $_SESSION["admin"]==true ) {
+if(isset($_SESSION["admin"])&& $_SESSION["admin"]!=true ) {
     header("Location: adminlogin.php");
 }?>
 <!DOCTYPE html>
